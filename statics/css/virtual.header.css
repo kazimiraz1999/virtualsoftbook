@@ -1,0 +1,172 @@
+
+:root{
+	--main-color:#0a0908;
+	--hover-color:#0077b6;
+  
+	--fw-500:500;
+	--fw-600:600;
+	--fw-700:700;
+  }
+.navbar {
+	background: #fff;
+	padding-top: 0;
+	padding-bottom: 0;
+	box-shadow: 1px 3px 4px 0 #adadad33;
+}
+.our_main_logo{
+    padding: 0;
+}
+.our_main_logo img{
+    width: 150px;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #3c3c3c;
+}
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+	color: #1ebdc2;
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+    padding: 25px;
+    font-weight: 600;
+	transition: 0.4s;
+	font-size: 16px;
+
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+	background: #1ebdc2;
+	transition: 0.4s;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #1ebdc2 !important;
+}
+.sm-menu {
+	border-radius: 0px;
+	border: 0px;
+	top: 97%;
+	box-shadow: rgba(173, 173, 173, 0.2) 1px 3px 4px 0px;
+}
+.dropdown-item {
+    margin: 8px 0;
+	color: #3c3c3c;
+	font-size: 15px;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+	color: #fff;
+	text-decoration: none;
+	background-color: #2196f3;
+}
+.navbar-toggler {
+	outline: none !important;
+}
+.navbar-tog {
+	color: #1ebdc2;
+}
+.megamenu-li {
+	position: static;
+}
+
+.megamenu {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	padding: 15px;
+}
+.megamenu h6 {
+	margin-left: 21px;
+}
+.megamenu i {
+	width: 20px;
+}
+
+
+
+
+
+
+/* ============== Footer Style Css Start =============== */
+.footer_top{
+	padding: 40px 0;
+}
+.footer_top_wrapper{}
+.footer_top_wrapper p{
+	display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin-bottom:10px;
+    font-size: 16px;
+}
+.footer_top_wrapper h2 > a{
+	font-size: 26px;
+}
+.footer_heading{
+	margin-top: 20px;
+	margin-bottom: 16px;
+}
+.footer_heading h1{
+	font-size: 20px;
+	text-decoration: underline;
+}
+.footer_menu ul li a{
+	margin: 6px 0;
+	display: inline-block;
+	color:var(--main-color);
+	font-weight: var(--fw-600);
+}
+.footer_menu ul li span{
+	background: var(--hover-color);
+	padding: 0px 6px;
+	color: #fff;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.social-menu ul li a{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: var(--main-color);
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 2px 2px 5px 2px #cccccc;
+	font-size: 20px;
+}
+.social-menu ul li:first-child a{
+	background: #0077b6;
+	color: #fff;
+}
+.social-menu ul li:nth-child(2) a{
+	background: #6d00b6;
+	color: #fff;
+}
+.social-menu ul li:nth-child(3) a{
+	background: #01c8ff;
+	color: #fff;
+}
+.social-menu ul li:first-child a{
+	background: #0077b6;
+	color: #fff;
+}
+
+.footer_bottom{
+	padding: 1rem 0;
+	background: #afafaf;
+}
+.footer_copyright p{
+	margin-bottom: 0;
+	font-size: 17px;
+}
+/* ============== Footer Style Css End =============== */

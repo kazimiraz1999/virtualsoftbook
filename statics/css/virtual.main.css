@@ -1,0 +1,434 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+:root{
+  --main-color:#0a0908;
+  --hover-color:#0077b6;
+
+  --fw-500:500;
+  --fw-600:600;
+  --fw-700:700;
+}
+body{
+  background: #ededea;
+}
+a{
+    text-decoration: none !important;
+  }
+  ul{
+    list-style: none;
+    padding-left: 0;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  *{
+    scrollbar-width: thin;
+    scrollbar-color: #080047 #ededed;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 2px;
+    height: 1px;
+  }
+  *::-moz-scrollbar {
+    width: 2px;
+    height: 1px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ededed;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #312783;
+    border-radius:0 0 10px 10px;
+    border: 1px solid #006eff;
+  }
+
+
+  .c-socials {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    padding: 1.2rem 1.2rem 0.5rem 1.2rem;
+    z-index: 2;
+  }
+  
+  .c-socials__list-item {
+    margin-bottom: 1rem;
+  }
+  .c-socials__list-item a{
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background: #006eff;
+  }
+  .c-slider{
+    overflow: hidden;
+  }
+  .c-slide {
+    display: inline-flex !important;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    will-change: background-size;
+    position: relative;
+    transition: .5s ease;
+    transition-delay: 0.4s;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .c-slide:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 63, 105, 0.8);
+    z-index: -1;
+  }
+  
+  .c-slide-content {
+    padding: 2rem;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 2;
+    max-width: 1200px;
+  }
+  
+  .c-slide__title {
+    font-size:34px;
+    text-transform: uppercase;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.8s ease;
+    will-change: opacity, transform;
+    color: #fff;
+    letter-spacing: 5px;
+  }
+  
+  .c-slide__title--large,
+  .c-slide__title--medium {
+    display: block;
+    font-size: 2.8em;
+    line-height: 110px;
+    transform: translateY(150px);
+    will-change: transform;
+    transition-delay: 0.4s;
+    position: relative;
+    transition: 1s ease;
+  }
+  
+  .c-slide__subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+  }
+  .c-slide__body {
+    margin-top: 0.7rem;
+    opacity: 0;
+    line-height:34px;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .c-slide__info {
+    transform: translateY(-150px);
+    transition: 0.8s ease;
+  }
+  
+  .c-wrap {
+    padding: 2rem 0;
+    overflow: hidden;
+  }
+  .c-wrap--small {
+    max-width: 60%;
+}
+  
+  .c-wrap--line {
+    position: relative;
+  }
+  .c-wrap--line:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: white;
+    bottom: 0;
+    transition: 0.9s ease;
+    transition-delay: 0.4s;
+  }
+  
+  .slick-list {
+    overflow: visible !important;
+  }
+  
+  .animateIn .c-slide__title--large,
+  .animateIn .c-slide__title--medium,
+  .animateIn .c-slide__info,
+  .animateIn .c-slide__title,
+  .animateIn .c-slide__body,
+  .initialAnimation .c-slide__title--large,
+  .initialAnimation .c-slide__title--medium,
+  .initialAnimation .c-slide__info,
+  .initialAnimation .c-slide__title,
+  .initialAnimation .c-slide__body {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .animateIn .c-wrap--line:after,
+  .initialAnimation .c-wrap--line:after {
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+  }
+  
+  .slick-list {
+    transition: 0.5s ease;
+  }
+  
+  .u-scale-out {
+    transform: scale(0.6) !important;
+    transition: 0.5s ease;
+  }
+  
+  .u-scale-in {
+    transform: scale(1);
+  }
+  
+  @media only screen and (max-width: 1300px) {
+    .c-slide__title {
+      font-size: 3em;
+    }
+  
+    .c-slide__title--large {
+      font-size: 2em;
+    }
+  
+    .c-wrap--small {
+      max-width: 50%;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .c-navigation {
+      display: none;
+    }
+  
+    .c-header {
+      justify-content: space-between;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .c-slide__title--medium {
+      font-size: 1.3em;
+    }
+  
+    .c-slide__title {
+      font-size: 2.5em;
+    }
+  
+    .c-slide__title--large {
+      font-size: 1.5em;
+    }
+  
+    .c-wrap--small {
+      max-width: 80%;
+    }
+  }
+
+
+
+
+  /* =========== Our Services Section Css Style Start ============ */
+  .vsb_services_sec{
+    padding-bottom: 60px;
+  }
+  .vsb_services_bg{
+    margin-top: -100px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 111;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16))
+    drop-shadow(0 3px 6px rgba(0, 0, 0, 0.23));
+  }
+  .vsb_left_services_content_wrapper{
+    background: #ededea;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 0px 2px var(--main-color);
+  }
+  .vsb_left_services_content_wrapper h1{
+    font-weight: var(--fw-600);
+    font-size: 34px;
+  }
+  .vsb_left_services_content_wrapper h1 span{
+    color: var(--hover-color);
+    font-weight: var(--fw-700);
+  }
+  .vsb_left_services_content_wrapper h4{
+    font-size: 20px;
+    color: var(--hover-color);
+  }
+  .vsb_left_services_content_wrapper .vsb_btn{
+    font-weight: var(--fw-600);
+    margin-top: 2rem;
+    width: 100%;
+    display: block;
+    padding: 12px;
+    background: #fff;
+    text-align: center;
+    font-size: 20px;
+    color: var(--main-color);
+    transition: .4s ease-in-out;
+    border-radius: 6px;
+    border: 1px dotted var(--hover-color);
+  }
+  .vsb_left_services_content_wrapper .vsb_btn:hover{
+    background: var(--hover-color);
+    color: #fff;
+  }
+  .vsb_s_left_item{
+    text-align: center;
+  }
+  .vsb_s_left_item:hover.vsb_s_left_item h1 {
+    color: var(--hover-color);
+  }
+  .vsb_s_left_item img{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: transparent;
+  }
+  .vsb_s_left_item h1{
+    font-size: 17px;
+  }
+
+  .vsb_right_service_item{
+    margin:0 .7rem 1.4rem .7rem;
+    padding: 16px 10px;
+    text-align: center;
+    border: 1px dotted var(--hover-color);
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.1);
+    height: 150px;
+  }
+  .vsb_right_service_item img{
+    width: 70px;
+  }
+  .vsb_right_service_item h4{
+    color: var(--main-color);
+    font-size: 15px;
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    line-height:22px;
+    letter-spacing:1.5px;
+  }
+  /* =========== Our Services Section Css Style End ============ */
+
+
+
+
+  /* ============ Features Client Logo Css Style Start ============ */
+  .features-area{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #fff;
+  }
+  .site-heading h2 {
+    display: block;
+    font-weight: var(--fw-700);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .site-heading h2 span {
+    color: var(--hover-color);
+  }
+  
+  .site-heading h4 {
+    display: inline-block;
+    padding-bottom: 20px;
+    position: relative;
+    text-transform: capitalize;
+    font-size: 20px;
+    z-index: 1;
+  }
+  
+  .site-heading h4::before {
+    background: #ffaf5a none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    width: 50px;
+  }
+  
+  .site-heading {
+    margin-bottom: 60px;
+    overflow: hidden;
+    margin-top: -5px;
+  }
+  .features-items,
+  .features-items .items-box {
+    overflow: hidden;
+  }
+  .features-area .equal-height::after {
+    background: var(--main-color) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 1px;
+  }
+  
+  .features-area.item-full .equal-height::before {
+    background: var(--hover-color) none repeat scroll 0 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 100%;
+  }
+  .features-area.item-full .features-items .item {
+    padding:15px 0;
+  }
+  .features-area .item .icon img {
+    background: #ffffff none repeat scroll 0 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px #cccccc;
+    height: 120px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+  }
+  /* ============ Features Client Logo Css Style Start =========== */
+
+
+  .latest_projects{
+    padding: 60px 0;
+  }
